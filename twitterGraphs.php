@@ -4,9 +4,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.js"></script>
     <script type="text/javascript" src="//ajax.aspnetcdn.com/ajax/4.0/1/MicrosoftAjax.js"></script>
+    <link rel="stylesheet" type="text/css" href="htStyles.css">
 
     <script type="text/javascript">
         function plz(){
+          //add a loading icon for when the graph data is being searched for. Probably need to send a trigger from the py file to stop showing the loading icon, and to start showing it once you click on the search button
             var input = document.getElementById("userInput").value;
             var input2 = document.getElementById("userInput2").value;
 
@@ -44,22 +46,28 @@
   <body>
 
 
+    <div id="mainBox" class='wrap'>
 
-    <form id="form" onsubmit="return false;">
-        <input type="text" id="userInput" />
-        <input type="text" id="userInput2" />
-    </form>
+      <div class='fancy'>Twitter Search Comparator</div><br>
+
+      <div style="color: white;">Enter 2 search terms or hashtags.<br>Please be patient, the search can take a minute.<br><br></div>
+
+      <form id="form" onsubmit="return false;">
+          <input type="text" id="userInput" />
+          <input type="text" id="userInput2" />
+      </form>
+
+      <button onclick="plz()">Search Twitter and compare!</button><br><br>
+
+      <div id="toBe"></div>
 
 
-    <button onclick="plz()">Search Twitter!</button>
 
-    <div id="toBe">Input 2 hashtags or serach terms</div>
-
-
-    <h2>Twitter Search comparator.</h2>
-
-    <div style="width:500px; height:500px;">
-      <canvas id="myChart"></canvas>
+      <div style="width:500px;">
+        <canvas id="myChart">
+ 
+        </canvas>
+      </div>
     </div>
 
   </body>
