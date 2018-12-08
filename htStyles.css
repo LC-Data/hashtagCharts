@@ -1,0 +1,51 @@
+body {
+	text-align: center;
+}
+
+#mainBox {
+	padding-top: 25px; 
+	border: 1px solid grey;
+	border-radius: 5px;
+	padding-left: 25px;
+	padding-right: 25px;
+	padding-bottom: 25px;
+	display: inline-block;
+}
+
+.wrap {
+    background: #55acee;
+    margin: 0 auto;
+    display: inline-block;
+    overflow: hidden;
+}
+
+ .loader {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.fancy {
+	padding-top: 25px;
+	background-color: white;
+	padding: 4px;
+	border: 1px solid grey;
+	border-radius: 5px;
+	font-size: 55px;
+	color: #55acee;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: grey;
+}
+
+canvas {
+	display: block;
+    margin-left: 30%;
+}
