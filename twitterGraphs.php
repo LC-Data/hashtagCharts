@@ -25,23 +25,30 @@
                 var myChart = new Chart(ctx, {
                   type: 'bar',
                   data: {
-                    labels: [input, input2],
+                    labels: [string2array[0],string2array[1]],
                     datasets: [{
-                      label: "Number of instances found",
-                      data: [string2array[0], string2array[1], 0],
+                      label: `Number of instances found`,
+                      data: [string2array[0],string2array[1], 0],
                       options: {
                         "responsive": true,
                         "maintainAspectRatio": false,
                       },
-                      backgroundColor: "rgba(153,255,51,0.6)"
+                      backgroundColor: ["rgba(153,255,51,0.6)", "rgba(1,1,1,0.6)"],
                     }]
+                  },
+                  options: {
+                  legend: { display: false },
+                  title: {
+                    display: true,
+                    text: `${input} vs ${input2}`
                   }
+                }
                 });
             });       
         }
 
     </script>
-
+    
   </head>
   <body>
 
@@ -63,11 +70,12 @@
 
 
 
-      <div style="width:500px;">
+      <div style="width:500px;float: middle; display: inline-block;" class='fancy'>
         <canvas id="myChart">
  
         </canvas>
-      </div>
+      </div><br><br><br>
+      <div class="footer">© <?php echo date("Y"); ?> Copyright Nathan Roane - Made with Python, PHP and JavaScript</div>
     </div>
 
   </body>
