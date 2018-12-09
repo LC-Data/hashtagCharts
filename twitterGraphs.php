@@ -25,7 +25,7 @@
                 var myChart = new Chart(ctx, {
                   type: 'bar',
                   data: {
-                    labels: [string2array[0],string2array[1]],
+                    labels: [input,input2],
                     datasets: [{
                       label: `Number of instances found`,
                       data: [string2array[0],string2array[1], 0],
@@ -40,7 +40,7 @@
                   legend: { display: false },
                   title: {
                     display: true,
-                    text: `${input} vs ${input2}`
+                    text: `${input} vs ${input2} - Number of results found`
                   }
                 }
                 });
@@ -48,7 +48,7 @@
         }
 
     </script>
-    
+
   </head>
   <body>
 
