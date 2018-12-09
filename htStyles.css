@@ -1,5 +1,7 @@
 body {
 	text-align: center;
+	background-image: url(./images/light.jpg);
+
 }
 
 #mainBox {
@@ -8,7 +10,7 @@ body {
 	border-radius: 5px;
 	padding-left: 25px;
 	padding-right: 25px;
-	padding-bottom: 25px;
+	padding-bottom: 5px;
 	display: inline-block;
 }
 
@@ -47,5 +49,15 @@ body {
 
 canvas {
 	display: block;
-    margin-left: 30%;
+}
+
+.footer {
+	font-size: 10px;
+	text-align: left;
+	color: white;
+	margin-left: -20px;
+}
+
+#toBe{
+	color: white;
 }
